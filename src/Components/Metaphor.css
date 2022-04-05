@@ -5,3 +5,12 @@
     color:#736b60;
     font-size: calc(30px + 2vmin);
 }
+
+
+.Bold
+{
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    color: #4b4237;
+    font-size: calc(30px + 3vmin);
+}
