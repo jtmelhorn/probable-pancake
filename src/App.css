@@ -2,14 +2,22 @@
   text-align: center;
 }
 
+.Probably
+{
+  font-size: calc(10px + 3vmin);
+  color: #4b4237;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #EDE7d9;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #736b50;
 }
 
 .App-link {

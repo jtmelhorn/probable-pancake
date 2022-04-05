@@ -1,5 +1,6 @@
-.MaybePancake
+.MaybePancakeImg
 {
     width: 500px;
     height:500px;
+    box-shadow: 25px 25px 50px 0 white inset, -50px -50px 50px 0 white inset; 
 }
