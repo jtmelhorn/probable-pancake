@@ -2,7 +2,7 @@ FROM node:16
 
 WORKDIR /app
 
-ENV PAth /app/node_modules/.bin:PATH
+ENV Path /app/node_modules/.bin:PATH
 
 COPY package*.json ./
 
