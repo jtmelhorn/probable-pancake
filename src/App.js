@@ -32,7 +32,7 @@ function randomImage()
   let x  = Math.floor(Math.random() * images.length)
   setImage(images[x])
   setTruth(false)
-  if (x == (images.length - 1))
+  if (x === (images.length - 1))
   {
     setTruth(true)
   }

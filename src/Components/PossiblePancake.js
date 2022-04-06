@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Metaphor from './Metaphor'
+import React from 'react'
 import './PossiblePancake.css'
 function PossiblePancake(props) {
   const curImage = props.curImage;
