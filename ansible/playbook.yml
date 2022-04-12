@@ -1,18 +1,55 @@
 ---
 - hosts: pancake
+
   tasks:
+
+    - name: install kubeadm
+      become: yes
+      apt:
+        name: kubeadm
+        state: latest
+
+    - name: install kubelet
+      become: yes
+      apt:
+        name: kubelet
+        state: latest
+
+    - name: install kubectl
+      become: yes
+      apt:
+        name: kubectl
+        state: latest
+
+    - name: open port 10250 for Kubelet API
+      become: yes
+      ufw:
+        rule: allow
+        proto: tcp
+        port: '10250'
+
+    - name: open ports 30000-32767 for NodePort Services
+      become: yes
+      ufw:
+        rule: allow
+        proto: tcp
+        port: '30000:32767'
+
     - name: install docker
       become: yes
       apt:
         name: docker
         state: latest
+
     - name: install kubernetes
       become: yes
       apt:
         name: kubernetes
         state: latest    
+
     - name: install npm
       become: yes
       apt:
         name: npm
         state: latest    
+
