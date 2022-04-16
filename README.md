@@ -12,3 +12,7 @@ Within this very small web app, I explored the use of UseState and React Props.
 Step 2 -- Docker. 
 
 Next, I figured that I needed to learn to walk before I learned to run.  I installed docker, and figured out how to create a docker image to run my web application.  
+
+Step 3 -- Ansible.
+
+I wanted to learn Ansible so I set up a Rasberry Pi and wrote an ansible playbook to install all dependencies and open the needed prots for kubeadm to work.  I anticipate getting a kubernetes cluster up and running within the next few weeks!
