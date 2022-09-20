@@ -1,0 +1,15 @@
+---
+- hosts: pancake
+  tasks:
+    - name: make sure docker is running
+      become: yes
+      ansible.builtin.service: 
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: run docker-compose
+      become: yes
+      shell:
+        cmd: "docker-compose up"
+        chdir: /home/ansible/probable-pancake

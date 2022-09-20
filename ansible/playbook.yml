@@ -3,53 +3,34 @@
 
   tasks:
 
-    - name: install kubeadm
+    - name: update ubuntu
       become: yes
-      apt:
-        name: kubeadm
-        state: latest
-
-    - name: install kubelet
-      become: yes
-      apt:
-        name: kubelet
-        state: latest
-
-    - name: install kubectl
-      become: yes
-      apt:
-        name: kubectl
-        state: latest
-
-    - name: open port 10250 for Kubelet API
-      become: yes
-      ufw:
-        rule: allow
-        proto: tcp
-        port: '10250'
-
-    - name: open ports 30000-32767 for NodePort Services
-      become: yes
-      ufw:
-        rule: allow
-        proto: tcp
-        port: '30000:32767'
-
+      apt: update_cache=yes force_apt_get=yes 
+        
     - name: install docker
       become: yes
       apt:
         name: docker
         state: latest
 
-    - name: install kubernetes
+    - name: install docker compose
       become: yes
       apt:
-        name: kubernetes
+        name: docker-compose
         state: latest    
 
     - name: install npm
       become: yes
       apt:
         name: npm
-        state: latest    
+        state: latest
+    
+    - name: make directory for probable pancake directory
+      become: yes
+      file:
+        path: /home/ansible/probable-pancake
+        state: directory
 
+    - name: git clone probable-pancake repo
+      become: yes
+      git: repo=https://github.com/jtmelhorn/probable-pancake.git dest=/home/ansible/probable-pancake

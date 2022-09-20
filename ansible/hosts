@@ -1,5 +1,5 @@
 [pancake]
-192.168.1.119
+192.168.1.100
 
 [pancake:vars]
 ansible_user =ansible
