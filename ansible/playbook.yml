@@ -3,10 +3,6 @@
 
   tasks:
 
-    - name: update ubuntu
-      become: yes
-      apt: update_cache=yes force_apt_get=yes 
-        
     - name: install docker
       become: yes
       apt:

@@ -1,6 +1,14 @@
 ---
 - hosts: pancake
   tasks:
+    - name: git pull
+      become: yes
+      git: 
+        repo: https://github.com/jtmelhorn/probable-pancake.git 
+        dest: /home/ansible/probable-pancake
+        update: yes
+        version: main
+
     - name: make sure docker is running
       become: yes
       ansible.builtin.service: 
@@ -11,5 +19,5 @@
     - name: run docker-compose
       become: yes
       shell:
-        cmd: "docker-compose up"
+        cmd: "docker-compose up -d --build"
         chdir: /home/ansible/probable-pancake
